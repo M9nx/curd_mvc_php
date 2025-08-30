@@ -15,7 +15,7 @@
             <?php endif; ?>
 
 
-            <form class="p-5 border mb-5" method="POST" action="<?php url('products/update'); ?>">
+            <form class="p-5 border mb-5" method="POST" action="<?php echo url('products/update'); ?>">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" required value="<?php echo $row['name']; ?>" name="name" class="form-control"

@@ -90,7 +90,7 @@ class ProductsController extends Controller
             {
                 $data['success'] = "Updated Successfully";
                 $data['row'] = $this->conn->getProduct($id)[0];
-                $this->view('products/edit',$data);
+                return $this->view('products/edit',$data);
             }
             else 
             {
@@ -106,6 +106,12 @@ class ProductsController extends Controller
 
     
     public function delete($id)
+    {
+        $data['product'] = $this->conn->getProduct($id)[0];
+        return $this->view('products/delete',$data);
+    }
+
+    public function confirmDelete($id)
     {
         if($this->conn->deleteProduct($id))
         {

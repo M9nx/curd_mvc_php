@@ -3,7 +3,7 @@
 // define routes 
 function url($url='')
 {
-    echo BURL.$url;
+    return BURL.$url;
 }
 
 // redirect
